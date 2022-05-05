@@ -1,0 +1,354 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+
+.nav {
+  margin-bottom: 10vh;
+  margin-top: 40px;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 20%;
+  gap: 40px;
+  list-style: none;
+}
+.nav-item {
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: black;
+}
+.nav-item:first-child {
+  color: #1a73e8;
+  border-bottom: 2px solid #1a73e8;
+}
+
+/* main header in profile and about */
+
+.profile {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.medium img {
+  max-width: 250px;
+  /* min-width: 30%; cuz its not working */
+  border-radius: 200px;
+  margin-bottom: 20px;
+}
+.medium {
+  /* something missing dts */
+}
+.medium-link {
+  display: flex;
+  list-style: none;
+  gap: 7%;
+  padding: 0;
+  justify-content: space-around;
+}
+.about {
+  width: 50%;
+  /* width: 700px; plz dont remove it */
+  font-size: 1.4em;
+}
+.about > p {
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* skilss section   */
+
+.skills img {
+  width: 60px;
+}
+.skills-header h2,
+.p-h2 {
+  text-align: center;
+  /* border: 2px solid green; */
+}
+.skills-header {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.replance-layout {
+  position: absolute;
+  left: 80%;
+  /* border: 2px solid green; */
+}
+.replance-layout button {
+  margin: 5px 15px;
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 350px));
+  justify-content: center;
+  column-gap: 0px;
+  row-gap: 0px;
+  padding: 0 20px;
+  margin: 0;
+}
+.skills-name {
+  margin: 20px;
+  text-align: center;
+}
+
+/* project section  */
+
+.boxes {
+  text-align: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.box {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  margin: 30px 30px 30px 30px;
+  vertical-align: middle;
+  box-shadow: 0 10px 38px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 38px 2px rgba(0, 0, 0, 0.3);
+}
+.box .boxes_img {
+  width: auto;
+  height: 75%;
+  position: relative;
+  background-color: #fdd835;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+}
+.box .boxes_img:hover {
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.box .boxes_text {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  color: #575757;
+  line-height: 150%;
+}
+
+/* FORM SECTION */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  border: 2px solid grey;
+  border-radius: 7px;
+  padding: 40px 20px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1000px;
+  justify-content: space-around;
+}
+.form {
+  width: 60%;
+  height: auto;
+}
+
+.form-div,
+.form-title {
+  position: relative;
+  height: 48px;
+  margin: 30px;
+}
+.textarea-div {
+  margin: 30px;
+}
+.form-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 2px solid grey;
+  outline: none;
+  background: none;
+  border-radius: 8px;
+  z-index: 1;
+}
+.form-label {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  padding: 0 0.5rem;
+  background-color: #fff;
+  color: grey;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.form-input:focus + .form-label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: 0.9rem;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  color: #1a73e8;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) + .form-label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: 0.9rem;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  border-radius: 8px;
+  border: 2px solid grey;
+  width: 100%;
+  outline: none;
+  font-size: 1.3em;
+  resize: vertical;
+  padding: 20px;
+  overflow: auto;
+}
+.form-input:focus,
+textarea:focus {
+  border-color: #1a73e8;
+}
+
+.form-side-img {
+  /* border: 2px solid grey; */
+  align-self: center;
+  text-align: center;
+  width: 30%;
+}
+.form-side-img img {
+  width: 100%;
+  height: auto;
+}
+
+.connect-btn {
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.connect-btn a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.form-btn {
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  background-color: #1a73e8;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* FOOTER SECTION IN CSS */
+
+.fdiv {
+  display: flex;
+  justify-content: space-between;
+  background-color: #dadce0;
+  color: #70757a;
+  margin-top: 100px;
+  padding: 20px;
+}
+.fdiv p {
+  margin: 20px 50px;
+}
+
+/* mobile view   */
+
+@media (max-width: 700px) {
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+  .nav .nav-list {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  .header {
+    display: block;
+    text-align: center;
+  }
+  .medium-link {
+    display: flex;
+    justify-content: center;
+  }
+  .header .about {
+    text-align: start;
+    width: 80%;
+    margin: 50px auto;
+  }
+  /* now time to SKILLS SECTION IN Mobo */
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 50%));
+    margin: 0;
+    gap: 20px;
+  }
+  .skills-name {
+    margin: 0;
+  }
+  
+  @media (max-width: 500px) {
+    .skills-container {
+      display: block;
+    }
+    .skills-name {
+      margin: 0;
+    }
+    .box {
+      margin: 30px 15px 30px 15px;
+    }
+  }
+
+  .form-container {
+    padding: 0;
+  }
+  .form {
+    width: 100%;
+  }
+
+  .form-side-img {
+    display: none;
+  }
+
+  .fdiv {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
